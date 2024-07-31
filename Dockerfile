@@ -1,26 +1,8 @@
-# FROM tomcat:10.1.26-jre21
-
-# ENV DB_RESOURCE_NAME="jdbc/helloworld" DB_URL="" DB_USERNAME="" DB_DRIVER_CLASS_NAME=""
-# ENV DB_PASSWORD_FILE="secrets/db-password"
-# ENV MANAGER_PASSWORD_FILE="secrets/manager-password"
-
-# COPY conf/context.xml conf/tomcat-users.xml ./conf/
-# COPY webapps/manager/META-INF/context.xml ./webapps/manager/META-INF/context.xml
-# COPY src/main/webapp/WEB-INF/web.xml ./webapps/sms/src/main/webapp/WEB-INF/web.xml
-# COPY webapps/sms/src/main/webapp/WEB-INF/web.xml ./webapps/sms/src/main/webapp/WEB-INF/web.xml
-
-# COPY run-catalina.sh /run-catalina.sh
-# RUN chmod +x /run-catalina.sh
-
-# CMD ["catalina.sh", "run"]
-
-# New
-
-FROM tomcat:10.1.26-jre21
+FROM tomcat:10.1.26-jdk21
 
 # Copy configuration files
 # COPY conf/context.xml /usr/local/tomcat/conf/context.xml
-COPY conf/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
+# COPY conf/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 # COPY conf/server.xml /usr/local/tomcat/conf/server.xml
 
 # Copy the web application
