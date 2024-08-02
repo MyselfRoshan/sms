@@ -7,7 +7,6 @@ FROM tomcat:jdk21
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
 # RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
 
-COPY target/sms.war /usr/local/tomcat/webapps/
 # Copy configuration files
 COPY conf/Catalina/localhost/manager.xml /usr/local/tomcat/conf/Catalina/localhost/manager.xml
 COPY conf/context.xml /usr/local/tomcat/conf/context.xml
@@ -21,4 +20,3 @@ COPY conf/web.xml /usr/local/tomcat/conf/web.xml
 
 # Use the default Tomcat entrypoint
 CMD ["catalina.sh", "run"]
-# CMD ["/usr/local/tomcat/bin/catalina.sh", "deploy", "--path", "/sms", "--war" "/sms.war"]

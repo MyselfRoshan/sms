@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      # - ./src:/usr/local/tomcat/webapps/sms/src
+      - ./target/sms:/usr/local/tomcat/webapps/sms
       # - ./src/main/webapp:/usr/local/tomcat/webapps/sms
       # - ./src/main/java:/usr/local/tomcat/webapps/sms/java
       - ./logs:/usr/local/tomcat/logs
