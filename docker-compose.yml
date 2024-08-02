@@ -1,13 +1,10 @@
 services:
   tomcat:
-    build:
-      context: '.'
-      dockerfile: Dockerfile
+    image: tomcat:jdk21
     container_name: tomcat
+    command: "catalina.sh run"
     ports:
       - "8080:8080"
     volumes:
       - ./target/sms:/usr/local/tomcat/webapps/sms
-      # - ./src/main/webapp:/usr/local/tomcat/webapps/sms
-      # - ./src/main/java:/usr/local/tomcat/webapps/sms/java
       - ./logs:/usr/local/tomcat/logs

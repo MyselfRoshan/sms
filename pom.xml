@@ -8,7 +8,6 @@
   <groupId>com.sms</groupId>
   <artifactId>sms</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <!-- <packaging>pom</packaging> -->
   <packaging>war</packaging>
 
   <name>sms Maven Webapp</name>
